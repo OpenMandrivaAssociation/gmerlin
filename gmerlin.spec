@@ -67,6 +67,7 @@ This package contains shared libraries for %name.
 Group: Development/Other
 Summary: Development files for %name
 Requires: %libname = %version
+Provides: %name-devel = %version
 
 %description -n %develname
 This package contains development files for %name.
