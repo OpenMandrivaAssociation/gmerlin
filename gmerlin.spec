@@ -7,6 +7,8 @@ License: LGPLv2+
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 Source0: http://downloads.sourceforge.net/gmerlin/%name-%version.tar.gz
+Patch0: gmerlin-0.4.1-build-with-gtk2.18.patch
+Patch1: gmerlin-0.4.1-linkage.patch
 BuildRequires: gavl-devel >= 1.1.0
 BuildRequires: libmjpegtools-devel
 BuildRequires: quicktime-devel
@@ -81,9 +83,12 @@ This package contains development files for %name.
 
 %prep
 %setup -q
+%patch0 -p0
+%patch1 -p0 -b .link
 
 %build
-%configure2_5x
+autoreconf -fi
+%configure2_5x --disable-rpath
 %make
 
 %install
