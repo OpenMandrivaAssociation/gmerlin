@@ -1,7 +1,7 @@
 Name: gmerlin
 Summary: A multimedia architecture for linux
-Version: 0.4.1
-Release: %mkrel 3
+Version: 0.4.2
+Release: %mkrel 1
 Url: http://gmerlin.sourceforge.net/
 License: LGPLv2+
 Group: Video
@@ -9,7 +9,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 Source0: http://downloads.sourceforge.net/gmerlin/%name-%version.tar.gz
 Patch0: gmerlin-0.4.1-build-with-gtk2.18.patch
 Patch1: gmerlin-0.4.1-linkage.patch
-BuildRequires: gavl-devel >= 1.1.0
+BuildRequires: gavl-devel >= 1.1.2
 BuildRequires: libmjpegtools-devel
 BuildRequires: quicktime-devel
 BuildRequires: pulseaudio-devel
