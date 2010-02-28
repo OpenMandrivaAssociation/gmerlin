@@ -1,6 +1,6 @@
 Name: gmerlin
 Summary: A multimedia architecture for linux
-Version: 0.4.2
+Version: 0.4.3
 Release: %mkrel 1
 Url: http://gmerlin.sourceforge.net/
 License: LGPLv2+
@@ -8,7 +8,7 @@ Group: Video
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 Source0: http://downloads.sourceforge.net/gmerlin/%name-%version.tar.gz
 Patch0: gmerlin-0.4.1-build-with-gtk2.18.patch
-Patch1: gmerlin-0.4.1-linkage.patch
+Patch1: gmerlin-0.4.3-linkage.patch
 BuildRequires: gavl-devel >= 1.1.2
 BuildRequires: libmjpegtools-devel
 BuildRequires: quicktime-devel
@@ -38,9 +38,10 @@ applications.
 %defattr(-,root,root)
 %doc %_datadir/doc/%name
 %_bindir/*
-%dir %_prefix/lib/%name
-%_prefix/lib/%name/plugins
+%dir %_libdir/%name
+%_libdir/%name/plugins
 %_datadir/%name
+%_datadir/pixmaps/*
 %_datadir/applications/*.desktop
 %_mandir/man1/*
 %_infodir/*
