@@ -7,10 +7,8 @@ License: LGPLv2+
 Group: Video
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 Source0: http://downloads.sourceforge.net/gmerlin/%name-%version.tar.gz
-Patch0: gmerlin-0.4.1-build-with-gtk2.18.patch
-Patch1: gmerlin-0.4.3-linkage.patch
+Patch0: gmerlin-1.0.0-link.patch
 BuildRequires: gavl-devel >= 1.2.0
-BuildRequires: libmjpegtools-devel
 BuildRequires: quicktime-devel
 BuildRequires: pulseaudio-devel
 BuildRequires: libalsa-devel
@@ -22,11 +20,21 @@ BuildRequires: libxml2-devel >= 2.4.0
 BuildRequires: fontconfig-devel >= 2.2.3
 BuildRequires: freetype2-devel
 BuildRequires: gtk2-devel >= 2.8.0
-BuildRequires: X11-devel
 BuildRequires: libcdio-devel
 BuildRequires: libvisual-devel
 BuildRequires: tiff-devel
 BuildRequires: libcddb-devel
+BuildRequires: musicbrainz-devel
+BuildRequires: libv4l-devel
+BuildRequires: mesagl-devel
+BuildRequires: libx11-devel
+BuildRequires: libxext-devel
+BuildRequires: libxfixes-devel
+BuildRequires: libxinerama-devel
+BuildRequires: libxtst-devel
+BuildRequires: libxv-devel
+BuildRequires: esound-devel
+BuildRequires: jackit-devel
 
 %description
 The gmerlin application framework consists of a toolkit indepentent
@@ -41,8 +49,8 @@ applications.
 %dir %_libdir/%name
 %_libdir/%name/plugins
 %_datadir/%name
-%_datadir/pixmaps/*
 %_datadir/applications/*.desktop
+%_iconsdir/*/*/*/*
 %_mandir/man1/*
 %_infodir/*
 
@@ -84,8 +92,10 @@ This package contains development files for %name.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
+autoreconf -fi
 %configure2_5x --disable-rpath
 %make
 
