@@ -1,7 +1,7 @@
 Name: gmerlin
 Summary: A multimedia architecture for linux
 Version: 1.0.0
-Release: %mkrel 2
+Release: 3
 Url: http://gmerlin.sourceforge.net/
 License: LGPLv2+
 Group: Video
@@ -87,7 +87,6 @@ This package contains development files for %name.
 %defattr(-,root,root)
 %_includedir/%name
 %_libdir/*.so
-%_libdir/*.la
 %_libdir/pkgconfig/*.pc
 
 %prep
@@ -100,7 +99,6 @@ autoreconf -fi
 %make
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
 # drop la files
@@ -108,5 +106,51 @@ rm -fr %buildroot%_prefix/lib/%_prefix/lib/%name/plugins/*.la
 
 %find_lang %name
 
-%clean
-rm -rf %buildroot
+
+%changelog
+* Thu Oct 27 2011 Götz Waschk <waschk@mandriva.org> 1.0.0-2mdv2012.0
++ Revision: 707543
+- rebuild for new libcdio
+
+* Mon Jan 17 2011 Funda Wang <fwang@mandriva.org> 1.0.0-1
++ Revision: 631204
+- fix BR and linkage
+- 1.0.0
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - rebuild
+
+* Sun Feb 28 2010 Funda Wang <fwang@mandriva.org> 0.4.3-1mdv2010.1
++ Revision: 512583
+- New version 0.4.3
+
+* Thu Feb 25 2010 Funda Wang <fwang@mandriva.org> 0.4.2-1mdv2010.1
++ Revision: 511058
+- new version 0.4.2
+
+* Sat Jan 16 2010 Funda Wang <fwang@mandriva.org> 0.4.1-3mdv2010.1
++ Revision: 492341
+- add patch fixing build with gtk > 2.18
+- finally fix linkage
+- rebuild for new libjpegv8
+
+* Sat Aug 22 2009 Funda Wang <fwang@mandriva.org> 0.4.1-2mdv2010.0
++ Revision: 419464
+- rebuild for new libjpegv7
+
+* Wed Jul 29 2009 Frederik Himpe <fhimpe@mandriva.org> 0.4.1-1mdv2010.0
++ Revision: 404245
+- Update to new version 0.4.1
+- Remove upstream patch
+
+* Thu Dec 18 2008 Funda Wang <fwang@mandriva.org> 0.4.0-1mdv2009.1
++ Revision: 315578
+- fix str fmt
+- new version 0.4.0
+
+* Thu Nov 27 2008 Funda Wang <fwang@mandriva.org> 0.3.8-1mdv2009.1
++ Revision: 307269
+- add virtual provdies
+- import gmerlin
+
+
