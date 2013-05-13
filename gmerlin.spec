@@ -1,11 +1,10 @@
 Name: gmerlin
 Summary: A multimedia architecture for linux
 Version: 1.0.0
-Release: 3
+Release: 4
 Url: http://gmerlin.sourceforge.net/
 License: LGPLv2+
 Group: Video
-BuildRoot: %{_tmppath}/%{name}-%{version}-build
 Source0: http://downloads.sourceforge.net/gmerlin/%name-%version.tar.gz
 Patch0: gmerlin-1.0.0-link.patch
 BuildRequires: gavl-devel >= 1.2.0
