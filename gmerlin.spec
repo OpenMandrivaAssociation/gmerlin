@@ -16,23 +16,23 @@ BuildRequires: jpeg-devel
 BuildRequires: png-devel
 BuildRequires: texinfo
 BuildRequires: doxygen
-BuildRequires: libxml2-devel >= 2.4.0
+BuildRequires: pkgconfig(libxml-2.0) >= 2.4.0
 BuildRequires: fontconfig-devel >= 2.2.3
 BuildRequires: freetype2-devel
 BuildRequires: gtk2-devel >= 2.8.0
-BuildRequires: libcdio-devel
-BuildRequires: libvisual-devel
+BuildRequires: pkgconfig(libcdio)
+BuildRequires: pkgconfig(libvisual-0.4)
 BuildRequires: tiff-devel
-BuildRequires: libcddb-devel
+BuildRequires: pkgconfig(libcddb)
 BuildRequires: musicbrainz-devel
-BuildRequires: libv4l-devel
+BuildRequires: pkgconfig(libv4l1)
 BuildRequires: mesagl-devel
-BuildRequires: libx11-devel
-BuildRequires: libxext-devel
-BuildRequires: libxfixes-devel
-BuildRequires: libxinerama-devel
-BuildRequires: libxtst-devel
-BuildRequires: libxv-devel
+BuildRequires: pkgconfig(x11)
+BuildRequires: pkgconfig(xext)
+BuildRequires: pkgconfig(xfixes)
+BuildRequires: pkgconfig(xinerama)
+BuildRequires: pkgconfig(xtst)
+BuildRequires: pkgconfig(xv)
 BuildRequires: esound-devel
 BuildRequires: jackit-devel
 
