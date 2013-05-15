@@ -18,7 +18,7 @@ BuildRequires: doxygen
 BuildRequires: pkgconfig(libxml-2.0) >= 2.4.0
 BuildRequires: fontconfig-devel >= 2.2.3
 BuildRequires: pkgconfig(freetype2)
-BuildRequires: gtk2-devel >= 2.8.0
+BuildRequires: pkgconfig(gtk+-2.0)
 BuildRequires: pkgconfig(libcdio)
 BuildRequires: pkgconfig(libvisual-0.4)
 BuildRequires: tiff-devel
