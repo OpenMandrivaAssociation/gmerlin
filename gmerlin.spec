@@ -10,14 +10,14 @@ Patch0: gmerlin-1.0.0-link.patch
 BuildRequires: gavl-devel >= 1.2.0
 BuildRequires: quicktime-devel
 BuildRequires: pulseaudio-devel
-BuildRequires: libalsa-devel
+BuildRequires: pkgconfig(alsa)
 BuildRequires: jpeg-devel
 BuildRequires: png-devel
 BuildRequires: texinfo
 BuildRequires: doxygen
 BuildRequires: pkgconfig(libxml-2.0) >= 2.4.0
 BuildRequires: fontconfig-devel >= 2.2.3
-BuildRequires: freetype2-devel
+BuildRequires: pkgconfig(freetype2)
 BuildRequires: gtk2-devel >= 2.8.0
 BuildRequires: pkgconfig(libcdio)
 BuildRequires: pkgconfig(libvisual-0.4)
