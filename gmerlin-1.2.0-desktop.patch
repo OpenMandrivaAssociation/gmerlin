@@ -1,0 +1,9 @@
+diff -urN gmerlin-1.2.0/apps/plugincfg/gmerlin-plugincfg.desktop gmerlin-1.2.0-patched/apps/plugincfg/gmerlin-plugincfg.desktop
+--- gmerlin-1.2.0/apps/plugincfg/gmerlin-plugincfg.desktop	2014-02-26 01:20:03.046243745 +1100
++++ gmerlin-1.2.0-patched/apps/plugincfg/gmerlin-plugincfg.desktop	2014-02-26 01:20:22.235603688 +1100
+@@ -6,4 +6,4 @@
+ Exec=gmerlin_plugincfg
+ Icon=gmerlin-plugincfg
+ Type=Application
+-Categories=Audio
++Categories=Audio;
