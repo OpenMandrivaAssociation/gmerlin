@@ -6,7 +6,7 @@
 Summary:	A multimedia architecture for linux
 Name:		gmerlin
 Version:	1.2.0
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Video
 Url:		http://gmerlin.sourceforge.net/
