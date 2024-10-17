@@ -9,7 +9,7 @@ Version:	1.2.0
 Release:	2
 License:	GPLv3+
 Group:		Video
-Url:		http://gmerlin.sourceforge.net/
+Url:		https://gmerlin.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/gmerlin/%{name}-%{version}.tar.gz
 Patch0:		gmerlin-1.0.0-link.patch
 Patch1:		gmerlin-1.2.0-icons.patch
